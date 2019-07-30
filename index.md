@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Just a place to note what I'm currently working on!
 
 You can use the [editor on GitHub](https://github.com/dannyleewalasek/dannyleewalasek.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
