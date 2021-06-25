@@ -1,5 +1,5 @@
 # ![Personal page/portfolio](https://iharsh234.github.io/WebApp/images/demo/demo_landing.JPG)
-# WebApp
+# Personal Website / Portfolio
 <table>
 <tr>
 <td>
@@ -11,8 +11,6 @@
 
 ### Landing Page
 Currently it is working on all NSE (India) Stocks, BSE (India) Stocks Symbol will be added soon.
-
-![](https://iharsh234.github.io/WebApp/images/demo/web_app_face.JPG)
 
 ### Query Filled Form
 ![](https://iharsh234.github.io/WebApp/images/demo/demo_query.JPG)
