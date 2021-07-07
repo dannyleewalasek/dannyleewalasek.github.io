@@ -320,6 +320,8 @@
   background-color: blue;
   overflow: hidden;
   background-image: url("./images/11.png");
+  background-size: cover;
+  border: solid 16px #2f2f2f;
 }
 .wideProject {
   grid-area: wideProject;
@@ -344,6 +346,7 @@
   background-color: blue;
   overflow: hidden;
   background-image: url("./images/educ.jpg");
+  border: solid 16px #2f2f2f;
 }
 .smallProject4 {
   grid-area: smallProject4;
