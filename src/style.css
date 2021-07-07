@@ -8,7 +8,7 @@
     color: #2f2f2f;
     font-family: "Open Sans", sans-serif;
     scroll-behavior: smooth;
-    overflow-y: hidden;
+    overflow: hidden;
     /* Hide vertical scrollbar */
   }
   .siteContainer {
@@ -224,93 +224,6 @@
     width: 10%;
     z-index: 10;
   }
-  .mediumProject {
-    background-image: url("./images/free2.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    box-sizing: border-box;
-    width: 30%;
-    background-color: white;
-    position: relative;
-    color: #fdfdfd;
-    transition: 0.5s;
-    margin: 2% 0;
-  }
-  .mediumProject:hover {
-    outline: 8px solid orange;
-    outline-offset: 8px;
-  }
-  .projectOverlay {
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #2f2f2f;
-    padding: 16px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: 0.75s;
-  }
-  .mediumProject:hover .projectOverlay {
-    opacity: 1;
-  }
-
-  .projectOverlay h1 {
-    font-size: 24px;
-    z-index: 10;
-    padding: 8px 0;
-    margin: 0;
-    text-align: center;
-    color: #2f2f2f;
-    background-color: #fdfdfd;
-  }
-
-  .projectOverlay p {
-    font-size: 12px;
-    margin-top: 0;
-  }
-
-  .linksContainer {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .projectOverlay .projectLink {
-    box-sizing: border-box;
-    width: calc(50% - 8px);
-    text-align: center;
-    /* border: 2px solid orange; */
-    padding: 8px;
-    cursor: pointer;
-    transition: 1s;
-    float: left;
-    color: #2f2f2f;
-    background-color: #fdfdfd;
-  }
-  .projectOverlay .projectLink:hover {
-    background-color: orange;
-  }
-
-  .projectOverlay .projectTechnologies {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  #first {
-    background-image: url("./images/crown.png");
-    background-size: cover;
-  }
-
-  #second {
-    background-image: url("./images/22.png");
-    background-size: cover;
-  }
 
   .projectsContainer {
     padding: 16px 16px 16px 20vw;
@@ -386,4 +299,133 @@
     border-left: 40px solid orange;
     transition: 1s;
   }
+}
+
+.container {
+  box-sizing: border-box;
+  padding: 64px 64px 64px 20vw;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 16px 16px;
+  grid-template-areas:
+    "tallProject smallProject smallProject2"
+    "tallProject wideProject wideProject"
+    "smallProject3 smallProject4 smallProject5";
+}
+.tallProject {
+  grid-area: tallProject;
+  background-color: blue;
+  overflow: hidden;
+  background-image: url("./images/11.png");
+}
+.wideProject {
+  grid-area: wideProject;
+  background-color: blue;
+  overflow: hidden;
+  background-image: url("./images/22.png");
+}
+.smallProject {
+  grid-area: smallProject;
+  background-color: blue;
+  overflow: hidden;
+  background-image: url("./images/crown.png");
+}
+.smallProject2 {
+  grid-area: smallProject2;
+  background-color: blue;
+  overflow: hidden;
+  background-image: url("./images/educ.jpg");
+}
+.smallProject3 {
+  grid-area: smallProject3;
+  background-color: blue;
+  overflow: hidden;
+  background-image: url("./images/educ.jpg");
+}
+.smallProject4 {
+  grid-area: smallProject4;
+  background-color: blue;
+  overflow: hidden;
+  background-image: url("./images/educ.jpg");
+}
+.smallProject5 {
+  grid-area: smallProject5;
+  background-color: blue;
+  overflow: hidden;
+  background-image: url("./images/educ.jpg");
+}
+.tallProject:hover .projectOverlay {
+  top: 0;
+}
+.smallProject3:hover .projectOverlay {
+  top: 0;
+}
+
+.projectOverlay {
+  position: relative;
+  top: calc(100% - 62px);
+  width: 100%;
+  height: 100%;
+  background-color: #2f2f2f;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.75s;
+  padding: 16px;
+}
+
+.projectOverlay h1 {
+  height: 62px;
+  font-size: 24px;
+  z-index: 10;
+  margin: 0;
+  text-align: center;
+  color: #fdfdfd;
+  background-color: 2f2f2f;
+}
+
+.projectOverlay p {
+  font-size: 12px;
+  margin-top: 0;
+  color: #fdfdfd;
+}
+
+.projectDescription {
+  margin-top: fill;
+  height: auto;
+  background-color: green;
+}
+
+.projectLinks {
+  display: flex;
+  justify-content: space-between;
+  background-color: blue;
+}
+
+.projectOverlay .projectLink {
+  /* box-sizing: border-box; */
+  flex-basis: 50%;
+  text-align: center;
+  padding: 8px;
+  margin: 16px;
+  border: none;
+  cursor: pointer;
+  transition: 1s;
+  color: #2f2f2f;
+  background-color: #fdfdfd;
+}
+.projectOverlay .projectLink:hover {
+  background-color: orange;
+}
+
+.projectOverlay .projectTechnologies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: red;
+  height: 20%;
 }
