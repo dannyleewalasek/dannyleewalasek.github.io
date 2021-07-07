@@ -78,3 +78,35 @@ document.querySelector(".contactLink").addEventListener("click", () => {
     }, 2000);
   });
 });
+
+const RenderProjects = () => {
+  const TEST = {
+    title: "hey",
+    description: "yes",
+    tech: ["./", "dd"],
+  };
+
+  const projectTemplate = ({ title, description, tech }) => {
+    return (
+      `<div class="mediumProject">
+  <div class="projectOverlay">
+    <h1>${title}</h1>
+    <p>
+    ${description}
+    </p>
+    <div class="projectTechnologies">` +
+      tech.forEach((tech) => console.log("rr")) +
+      `</div>
+    <div>
+      <div class="projectLink">CODE</div>
+      <div class="projectLink">LIVE</div>
+    </div>
+  </div>
+</div>`
+    );
+  };
+
+  console.log(projectTemplate(TEST));
+};
+
+RenderProjects();

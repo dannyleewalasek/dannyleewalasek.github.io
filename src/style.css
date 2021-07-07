@@ -353,17 +353,20 @@
 
   .academicEntry a {
     text-decoration: underline;
+    cursor: pointer;
   }
 
   .academicEntry h2 {
     font-family: "Montserrat", sans-serif;
     font-size: 24px;
-    line-height: 0;
+    line-height: 16px;
+    padding-top: 0;
+    margin-top: 0;
     color: black;
   }
   .academicEntry h3 {
     font-size: 16px;
-    line-height: 4px;
+    line-height: 8px;
   }
   .academicEntry:before {
     content: "";
