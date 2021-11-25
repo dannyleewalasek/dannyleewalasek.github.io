@@ -1,0 +1,271 @@
+@media only screen and (max-width: 866px) {
+  body,
+  html {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    height: 5vh;
+    position: fixed;
+    top: 0;
+    align-self: flex-start;
+    z-index: 100;
+    background-color: #fdfdfd;
+  }
+
+  .navigation .navlinks #title {
+    display: none;
+  }
+
+  .navlinks {
+    padding: 8px;
+    width: 100vw;
+    font-weight: bolder;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: left;
+    justify-content: space-around;
+  }
+
+  .link {
+    transition: 2s;
+    cursor: pointer;
+  }
+
+  .selectedlink {
+    color: orange;
+    transform: translateY(16px);
+  }
+
+  .banner {
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 20vh;
+    background-image: url("./images/pex2.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: 1s;
+    position: relative;
+    z-index: 1;
+  }
+
+  .bannerText {
+    background-color: #2f2f2fa8;
+    z-index: 1;
+    color: #fdfdfd;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+  }
+  .bannerText:first-child {
+    background-color: #fdfdfd;
+    color: #2f2f2f;
+  }
+  .bannerText:nth-child(2) {
+    background-color: #2f2f2f;
+    z-index: 20;
+  }
+  .bannerText:first-child:before {
+    content: "";
+    height: 100%;
+    width: 220%;
+    position: absolute;
+    top: -67%;
+    left: -50%;
+    border-bottom: 16px solid orange;
+    transform: rotateZ(-33.7deg);
+  }
+  .bannerText:first-child:before {
+    z-index: -1;
+  }
+  .bannerText:first-child {
+    z-index: 11;
+  }
+  .bannerText:nth-child(2):before {
+    z-index: 10;
+  }
+
+  .programmingLanguages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    height: 100px;
+    background-color: #fdfdfd;
+  }
+
+  .language {
+    width: 10%;
+    z-index: 10;
+    transition: 0.5s;
+  }
+  .language:hover {
+    filter: invert(56%) sepia(64%) saturate(1291%) hue-rotate(1deg)
+      brightness(110%) contrast(104%);
+    width: 10%;
+    z-index: 10;
+  }
+
+  .mediumProject {
+    background-image: url("./images/free2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    width: 80%;
+    background-color: white;
+    position: relative;
+    color: #fdfdfd;
+    transition: 0.5s;
+    margin: 2% 0;
+  }
+  .projectOverlay {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2f2f2f;
+    padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.5s;
+    border: 4px solid orange;
+  }
+  .mediumProject:hover .projectOverlay {
+    opacity: 1;
+  }
+
+  .projectOverlay h1 {
+    font-size: 24px;
+    z-index: 10;
+    padding: 8px 0;
+    margin: 0;
+    text-align: center;
+    color: #2f2f2f;
+    background-color: #fdfdfd;
+  }
+
+  .projectOverlay p {
+    font-size: 12px;
+    margin-top: 0;
+  }
+
+  .projectOverlay .projectLink {
+    box-sizing: border-box;
+    width: calc(50% - 8px);
+    text-align: center;
+    /* border: 2px solid orange; */
+    padding: 8px;
+    margin: 4px;
+    cursor: pointer;
+    transition: 1s;
+    float: right;
+    color: #2f2f2f;
+    background-color: #fdfdfd;
+  }
+  .projectOverlay .projectLink:hover {
+    background-color: orange;
+  }
+
+  .projectOverlay .projectTechnologies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #first {
+    background-image: url("./images/crown.png");
+    background-size: cover;
+  }
+
+  #second {
+    background-image: url("./images/22.png");
+    background-size: cover;
+  }
+
+  .projectsContainer {
+    padding-top: 10vh;
+    height: 300vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+  }
+
+  .academicContainer {
+    height: 100vh;
+    box-sizing: border-box;
+    padding-top: 10vh;
+    width: 100vw;
+    background-color: orange;
+    box-sizing: border-box;
+    background-image: url("./images/educ.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .academicEntry {
+    width: 80%;
+    color: #2f2f2f;
+    background-color: #fdfdfd;
+    position: relative;
+    transition: 1s;
+    margin-left: 8px;
+  }
+
+  .academicEntry:hover {
+    color: #2f2f2f;
+    transition: 2s;
+  }
+
+  .academicEntry a {
+    text-decoration: underline;
+  }
+
+  .academicEntry h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    line-height: 0;
+    color: black;
+  }
+  .academicEntry h3 {
+    font-size: 16px;
+    line-height: 4px;
+  }
+  .academicEntry:before {
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -3%;
+    border-left: 8px solid orange;
+    transition: 1s;
+  }
+  .academicEntry:hover:before {
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -3%;
+    border-left: 40px solid orange;
+    transition: 1s;
+  }
+}

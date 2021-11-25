@@ -1,0 +1,434 @@
+@media only screen and (min-width: 866px) {
+  body,
+  html {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background-color: #fdfdfd;
+    color: #2f2f2f;
+    font-family: "Open Sans", sans-serif;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    /* Hide vertical scrollbar */
+  }
+  .siteContainer {
+    height: 100%;
+  }
+  h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 64px;
+  }
+  h2 {
+    color: #fdfdfd;
+    font-size: 32px;
+    font-family: "Open Sans", sans-serif;
+  }
+  h3 {
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 9000;
+  }
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  .scroll {
+    opacity: 0;
+    transition: 0.75s ease-in;
+  }
+
+  .scrolled {
+    opacity: 1;
+    transition: 0.75s ease-in;
+  }
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    align-self: flex-start;
+    z-index: 100;
+    background-color: #fdfdfd;
+  }
+
+  #title {
+    text-decoration: underline 4px rgba(255, 166, 0, 0.288);
+    text-underline-offset: 4px;
+  }
+
+  .footer {
+    font-weight: 300;
+    width: 50px;
+    margin-left: 64px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .contactIcon {
+    width: 30px;
+    height: 30px;
+    border: 4px solid #585858;
+    cursor: pointer;
+    margin: 8px;
+    transition: 0.5s;
+  }
+  .contactIcon:hover {
+    border: 2px solid orange;
+    filter: invert(56%) sepia(64%) saturate(1291%) hue-rotate(1deg)
+      brightness(110%) contrast(104%);
+  }
+
+  .selectedlink {
+    color: orange;
+    transform: translateX(16px);
+  }
+
+  .navlinks {
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 64px;
+    margin-top: 32px;
+  }
+  .link:hover {
+    color: orange;
+  }
+
+  .link {
+    margin-bottom: 8px;
+    transition: 2s;
+    cursor: pointer;
+  }
+  .contactLink {
+    margin-bottom: 8px;
+    transition: 2s;
+    cursor: pointer;
+  }
+
+  @keyframes highLight {
+    0% {
+      transform: translateY(0);
+      border-color: black;
+    }
+    50% {
+      transform: translateY(-100px);
+      border-color: orange;
+      filter: invert(56%) sepia(64%) saturate(1291%) hue-rotate(1deg)
+        brightness(110%) contrast(104%);
+    }
+    100% {
+      transform: translateY(0);
+      border-color: black;
+    }
+  }
+
+  .siteContainer {
+    padding: 0;
+    margin: 0;
+  }
+
+  .contactHighlight {
+    animation-name: highLight;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0, 1.5, 1, 1);
+  }
+
+  .content {
+    height: 100vh;
+    width: 300vw;
+    margin-left: 20vw;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .banner {
+    padding: 128px;
+    padding-left: calc(20vw + 128px);
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("./images/pex2.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: 1s;
+    position: relative;
+    z-index: 1;
+  }
+
+  .bannerText {
+    background-color: #2f2f2fa8;
+    z-index: 1;
+    color: #fdfdfd;
+    font-size: 36px;
+    text-align: center;
+    padding: 0 64px;
+    position: relative;
+  }
+  .bannerText:first-child {
+    background-color: #fdfdfd;
+    color: #2f2f2f;
+  }
+  .bannerText:nth-child(2) {
+    background-color: #2f2f2f;
+    z-index: 20;
+  }
+  .bannerText:first-child:before {
+    content: "";
+    height: 100%;
+    width: 220%;
+    position: absolute;
+    top: -67%;
+    left: -50%;
+    border-bottom: 16px solid orange;
+    transform: rotateZ(-33.7deg);
+  }
+  .bannerText:first-child:before {
+    z-index: -1;
+  }
+  .bannerText:first-child {
+    z-index: 11;
+  }
+  .bannerText:nth-child(2):before {
+    z-index: 10;
+  }
+
+  .programmingLanguages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    height: 100px;
+    background-color: #fdfdfd;
+  }
+
+  .language {
+    width: 5%;
+    z-index: 10;
+    transition: 0.5s;
+  }
+  .language:hover {
+    filter: invert(56%) sepia(64%) saturate(1291%) hue-rotate(1deg)
+      brightness(110%) contrast(104%);
+    width: 10%;
+    z-index: 10;
+  }
+
+  .projectsContainer {
+    padding: 16px 16px 16px 20vw;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+  }
+  .academicContainer {
+    height: 100vh;
+    box-sizing: border-box;
+    margin-left: 20vw;
+    width: 80vw;
+    background-color: orange;
+    padding: 64px;
+    box-sizing: border-box;
+    background-image: url("./images/educ.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .academicEntry {
+    padding: 32px;
+    width: 80%;
+    color: #2f2f2f;
+    background-color: #fdfdfd;
+    position: relative;
+    transition: 1s;
+    margin-left: 32px;
+  }
+
+  .academicEntry:hover {
+    color: #2f2f2f;
+    transition: 2s;
+  }
+
+  .academicEntry a {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .academicEntry h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    line-height: 16px;
+    padding-top: 0;
+    margin-top: 0;
+    color: black;
+  }
+  .academicEntry h3 {
+    font-size: 16px;
+    line-height: 8px;
+  }
+  .academicEntry:before {
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -3%;
+    border-left: 8px solid orange;
+    transition: 1s;
+  }
+  .academicEntry:hover:before {
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -3%;
+    border-left: 40px solid orange;
+    transition: 1s;
+  }
+}
+
+.container {
+  box-sizing: border-box;
+  padding: 64px 64px 64px 20vw;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 16px 16px;
+  grid-template-areas:
+    "tallProject smallProject smallProject2"
+    "tallProject wideProject wideProject"
+    "smallProject3 smallProject4 smallProject5";
+}
+.tallProject {
+  grid-area: tallProject;
+  background-color: blue;
+  overflow: hidden;
+  background-image: url("./images/11.png");
+  background-size: cover;
+  border: solid 16px #2f2f2f;
+}
+.wideProject {
+  grid-area: wideProject;
+  background-color: blue;
+  overflow: hidden;
+  background-image: url("./images/22.png");
+}
+.smallProject {
+  grid-area: smallProject;
+  background-color: blue;
+  overflow: hidden;
+  background-image: url("./images/crown.png");
+}
+.smallProject2 {
+  grid-area: smallProject2;
+  background-color: blue;
+  overflow: hidden;
+  background-image: url("./images/educ.jpg");
+}
+.smallProject3 {
+  grid-area: smallProject3;
+  background-color: blue;
+  overflow: hidden;
+  background-image: url("./images/educ.jpg");
+  border: solid 16px #2f2f2f;
+}
+.smallProject4 {
+  grid-area: smallProject4;
+  background-color: blue;
+  overflow: hidden;
+  background-image: url("./images/educ.jpg");
+}
+.smallProject5 {
+  grid-area: smallProject5;
+  background-color: blue;
+  overflow: hidden;
+  background-image: url("./images/educ.jpg");
+}
+.tallProject:hover .projectOverlay {
+  top: 0;
+}
+.smallProject3:hover .projectOverlay {
+  top: 0;
+}
+
+.projectOverlay {
+  position: relative;
+  top: calc(100% - 62px);
+  width: 100%;
+  height: 100%;
+  background-color: #2f2f2f;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.75s;
+  padding: 16px;
+}
+
+.projectOverlay h1 {
+  height: 62px;
+  font-size: 24px;
+  z-index: 10;
+  margin: 0;
+  text-align: center;
+  color: #fdfdfd;
+  background-color: 2f2f2f;
+}
+
+.projectOverlay p {
+  font-size: 12px;
+  margin-top: 0;
+  color: #fdfdfd;
+}
+
+.projectDescription {
+  margin-top: fill;
+  height: auto;
+  background-color: green;
+}
+
+.projectLinks {
+  display: flex;
+  justify-content: space-between;
+  background-color: blue;
+}
+
+.projectOverlay .projectLink {
+  /* box-sizing: border-box; */
+  flex-basis: 50%;
+  text-align: center;
+  padding: 8px;
+  margin: 16px;
+  border: none;
+  cursor: pointer;
+  transition: 1s;
+  color: #2f2f2f;
+  background-color: #fdfdfd;
+}
+.projectOverlay .projectLink:hover {
+  background-color: orange;
+}
+
+.projectOverlay .projectTechnologies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: red;
+  height: 20%;
+}
