@@ -2,26 +2,51 @@ html,
 body {
   height: 100%;
   width: 100%;
+  position: relative;
+}
+body::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("../img/circuitboard.jpg");
+  z-index: -1;
+  opacity: 0.1;
+}
+body {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 32px;
   box-sizing: border-box;
 }
-main {
-  background-color: white;
+h1 {
+  color: #ffa500;
   width: 100%;
+  text-align: center;
+  font-size: 32px;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 4px;
+}
+main {
+  overflow: scroll;
+  box-sizing: border-box;
+  background-color: white;
+  max-width: 100%;
   height: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.404);
+  border: 3px solid black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: flex;
+  color: #2f2f2f;
 }
 article {
-  height: 100%;
   flex-grow: 1;
   background-color: white;
   box-sizing: border-box;
   position: relative;
+  padding: 32px;
+  flex-grow: 1;
+  flex-basis: 0;
 }
 article:nth-child(1):after {
   content: "";
@@ -29,7 +54,7 @@ article:nth-child(1):after {
   height: 80%;
   right: -1px;
   top: 10%;
-  border: 2px solid black;
+  border: 1px solid #7d7d7d;
 }
 article:nth-child(2):after {
   content: "";
@@ -37,24 +62,58 @@ article:nth-child(2):after {
   height: 80%;
   right: -1px;
   top: 10%;
-  border: 2px solid black;
+  border: 1px solid #7d7d7d;
 }
 h2 {
   width: 100%;
-  color: black;
-  position: absolute;
+  color: #ffa500;
+  position: relative;
   display: flex;
   justify-content: center;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 4px;
 }
 h2:after {
   content: "";
   position: absolute;
-  width: 80%;
+  width: 90%;
   top: 50%;
-  border: 2px solid black;
+  border-top: 1px solid #7d7d7d;
   z-index: 0;
 }
 h2 span {
   background-color: white;
   z-index: 1;
+  padding: 8px;
+}
+
+.experience_entry {
+  display: block;
+  padding: 16px 0 16px 0;
+  display: flex;
+  font-size: 16px;
+}
+
+.experience_title {
+  padding-right: 16px;
+  color: #7d7d7d;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.experience_detail {
+  padding-left: 16px;
+  flex-grow: 2;
+  flex-basis: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 1200px) {
+  main {
+    flex-direction: column;
+  }
 }
