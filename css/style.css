@@ -27,6 +27,7 @@ h1 {
   font-size: 32px;
   font-family: "Lato", sans-serif;
   letter-spacing: 4px;
+  padding-bottom: 16px;
 }
 main {
   overflow: scroll;
@@ -48,22 +49,7 @@ article {
   flex-grow: 1;
   flex-basis: 0;
 }
-article:nth-child(1):after {
-  content: "";
-  position: absolute;
-  height: 80%;
-  right: -1px;
-  top: 10%;
-  border: 1px solid #7d7d7d;
-}
-article:nth-child(2):after {
-  content: "";
-  position: absolute;
-  height: 80%;
-  right: -1px;
-  top: 10%;
-  border: 1px solid #7d7d7d;
-}
+
 h2 {
   width: 100%;
   color: #ffa500;
@@ -72,6 +58,7 @@ h2 {
   justify-content: center;
   font-family: "Lato", sans-serif;
   letter-spacing: 4px;
+  padding: 16px 0 16px 0;
 }
 h2:after {
   content: "";
@@ -111,9 +98,41 @@ h2 span {
   main {
     flex-direction: row;
   }
+  article:nth-child(1):after {
+    content: "";
+    position: absolute;
+    height: 80%;
+    right: -1px;
+    top: 10%;
+    border: 1px solid #7d7d7d;
+  }
+  article:nth-child(2):after {
+    content: "";
+    position: absolute;
+    height: 80%;
+    right: -1px;
+    top: 10%;
+    border: 1px solid #7d7d7d;
+  }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 600px) and (max-width: 1200px) {
   main {
     flex-direction: column;
+    overflow-x: hidden;
+  }
+  article:nth-child(1):after {
+    display: none;
+  }
+  article:nth-child(2):after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  article {
+    display: none;
+  }
+  main {
+    width: 100%;
   }
 }
