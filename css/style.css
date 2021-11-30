@@ -29,6 +29,9 @@ h1 {
   letter-spacing: 4px;
   padding-bottom: 16px;
 }
+a {
+  color: #ffa500;
+}
 main {
   overflow: scroll;
   box-sizing: border-box;
@@ -45,7 +48,7 @@ article {
   background-color: #fdfdfd;
   box-sizing: border-box;
   position: relative;
-  padding: 32px;
+  padding: 32px 32px 0 32px;
   flex-grow: 1;
   flex-basis: 0;
 }
@@ -143,21 +146,14 @@ button:hover {
   main {
     flex-direction: row;
   }
-  article:nth-child(1):after {
-    content: "";
-    position: absolute;
-    height: 80%;
-    right: -1px;
-    top: 10%;
-    border: 1px solid #7d7d7d;
-  }
+  article:nth-child(1):after,
   article:nth-child(2):after {
     content: "";
     position: absolute;
-    height: 80%;
+    height: 90%;
     right: -1px;
-    top: 10%;
-    border: 1px solid #7d7d7d;
+    top: 5%;
+    border: 1px solid #b8b8b8;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 1200px) {
