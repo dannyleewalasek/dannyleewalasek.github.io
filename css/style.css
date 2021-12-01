@@ -103,7 +103,7 @@ p {
   margin-top: 16px;
 }
 
-.experience_entry {
+.row_entry {
   display: block;
   padding: 16px 0 16px 0;
   display: flex;
@@ -111,14 +111,14 @@ p {
   line-height: 1.4;
 }
 
-.experience_title {
+.row_title {
   padding-right: 16px;
   color: #7d7d7d;
   flex-grow: 1;
   flex-basis: 0;
 }
 
-.experience_detail {
+.row_detail {
   padding-left: 16px;
   flex-grow: 2;
   flex-basis: 0;
@@ -140,6 +140,11 @@ button:hover {
   border: none;
   color: #ffa500;
   font-size: 16px;
+}
+
+.blur {
+  color: transparent;
+  text-shadow: 0 0 8px #000;
 }
 
 @media screen and (min-width: 1200px) {
@@ -170,10 +175,17 @@ button:hover {
 }
 
 @media screen and (max-width: 600px) {
-  article {
-    display: none;
-  }
   main {
     width: 100%;
+    flex-direction: column;
+  }
+  #blog {
+    display: none;
+  }
+  .row_entry {
+    flex-direction: column;
+  }
+  BODY {
+    padding: 16px;
   }
 }
