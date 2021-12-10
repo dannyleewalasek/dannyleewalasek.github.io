@@ -1,6 +1,8 @@
 # ![Personal page/portfolio](img/readme/full.png)
+
 # Personal Website / Portfolio
-<p> This ones pretty self explanatory, just some good old simple html and css for my landing page. Live version <a href="https://dannyleewalasek.github.io/">HERE</a>
+
+<p> This ones pretty self explanatory, just some good old simple html and css for my landing page. Live version <a href="https://dannyleewalasek.github.io/">HERE</a></p>
 ## Site
 ## Built with 
 - [CSS]
