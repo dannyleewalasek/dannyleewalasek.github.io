@@ -186,6 +186,7 @@ button:hover {
 
 @media screen and (max-width: 600px) {
   main {
+    overflow:hidden;
     width: 100%;
     height: auto;
     flex-direction: column;
