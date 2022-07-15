@@ -160,6 +160,7 @@ button:hover {
 @media screen and (min-width: 1200px) {
   main {
     flex-direction: row;
+    overflow:hidden;
   }
   article:nth-child(1):after,
   article:nth-child(2):after {
